@@ -1,29 +1,30 @@
-
 import React from 'react';
 
 function Avatar({ person, size }) {
-  console.log(person.name, size);
-
   return (
-    <img
-    className="rounded-circle avatar"
-      src={`https://i.imgur.com/${person.imageId}.jpg`}
-      alt={person.name}
-      width={size}
-      height={size}
-      style={{
-        width: `${size}px`,
-        height: `${size}px`,
-        borderRadius: '50%',
-        objectFit: 'cover',
-      }}
-    />
+    <div className="avatar-card">
+      <img
+        className="rounded-circle avatar"
+        src={`https://i.imgur.com/${person.imageId}.jpg`}
+        alt={person.name}
+        width={size}
+        height={size}
+        style={{
+          width: `${size}px`,
+          height: `${size}px`,
+          borderRadius: '50%',
+          objectFit: 'cover',
+        }}
+      />
+
+      <h3>{person.name}</h3>
+    </div>
   );
 }
 
 export const Props = () => {
   return (
-    <div>
+    <div className="props-container">
       <Avatar
         size={200}
         person={{ name: 'Katsuko Saruhashi', imageId: 'YfeOqp2' }}
