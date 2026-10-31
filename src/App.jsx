@@ -30,7 +30,7 @@ const Rickandmorty = lazy(() =>
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/react">
       <Header />
 
       <main className="flex-grow-1">

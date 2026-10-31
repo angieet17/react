@@ -1,15 +1,16 @@
-
-import react from '@vitejs/plugin-react';
-import { defineConfig } from 'vite';
-import { VitePWA } from 'vite-plugin-pwa';
-import { visualizer } from 'rollup-plugin-visualizer';
+import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite'
+import { VitePWA } from 'vite-plugin-pwa'
+import { visualizer } from 'rollup-plugin-visualizer'
 
 export default defineConfig({
+  base: '/react/',
+
   plugins: [
     react(),
 
     VitePWA({
-      injectRegister: 'inline', 
+      injectRegister: 'inline',
       registerType: 'autoUpdate',
 
       workbox: {
@@ -22,11 +23,10 @@ export default defineConfig({
         name: 'My App',
         short_name: 'My App',
         description: 'My App description',
-        scope: '/',
-        start_url: '/',
+        scope: '/react/',
+        start_url: '/react/',
         display: 'standalone',
         theme_color: '#000000',
-
         icons: [
           {
             src: 'favicon.png',
@@ -44,4 +44,4 @@ export default defineConfig({
       brotliSize: true
     })
   ]
-});
+})
