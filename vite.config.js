@@ -5,7 +5,9 @@ import { visualizer } from 'rollup-plugin-visualizer'
 
 export default defineConfig({
   base: '/react/',
-
+  build: {
+    outDir: 'docs'
+  },
   plugins: [
     react(),
 
