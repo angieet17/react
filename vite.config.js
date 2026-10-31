@@ -31,9 +31,10 @@ export default defineConfig({
         theme_color: '#000000',
         icons: [
           {
-            src: 'favicon.png',
+            src: 'favicon.svg',
             sizes: '192x192',
-            type: 'image/png'
+            type: 'image/svg+xml',
+            purpose: 'any'
           }
         ]
       }
